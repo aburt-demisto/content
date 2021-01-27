@@ -123,6 +123,7 @@ configuration:
   defaultvalue: "5"
   type: 0
   required: false
+  additionalinfo: When the selected timeout was reached, notable events that were not enriched will be saved without the enrichment.
 - display: Number of Events Per Enrichment Type
   name: num_enrichment_events
   defaultvalue: "20"

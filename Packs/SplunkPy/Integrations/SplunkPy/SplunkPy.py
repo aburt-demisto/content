@@ -1062,7 +1062,6 @@ def enrich_new_notables(service, enabled_enrichments, incidents, num_enrichment_
     for notable in not_yet_enriched_notables:
         enrichment = {XSOAR_ID: uuid.uuid4().hex, ENRICHMENT_JOBS: [], ENRICHMENT_NOTABLE: notable}
         if DRILLDOWN_ENRICHMENT in enabled_enrichments:
-            pass
             drilldown_status = drilldown_enrichment(service, notable, enrichment, num_enrichment_events)
         if ASSET_ENRICHMENT in enabled_enrichments:
             asset_status = asset_enrichment(service, notable, enrichment, num_enrichment_events)
